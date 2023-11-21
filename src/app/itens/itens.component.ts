@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
+import { OnInit } from '@angular/core';
+import { SessaoService } from './service/sessao.service';
+import { Isessao } from './service/isessao';
 
 @Component({
   selector: 'app-itens',
   templateUrl: './itens.component.html',
   styleUrls: ['./itens.component.scss']
 })
-export class ItensComponent {
+export class ItensComponent implements OnInit{
+
+  ngOnInit(): void { this.listar() }
+
+  produtos: Isessao[] = [];
+
+  constructor(private service: SessaoService){}
+
+  listar(){
+    this.service.listar().subscribe(dados => this.produtos = dados);
+  }
+
   Comprar(){
     Swal.fire({
       title: "Você deseja adicionar ao carrinho esse produto?",

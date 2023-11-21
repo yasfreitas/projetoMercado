@@ -1,0 +1,11 @@
+{
+    "produtos": [
+        {
+            "img": "../../assets/doce.webp",
+            "nome": "docinho japonês sabor morango",
+            "valor": 25.90,
+            "descricao": "doce japonês sabor morango, unid 8",
+            "id": 1
+        }
+    ]
+}

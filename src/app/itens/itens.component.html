@@ -1,38 +1,12 @@
 <div class="container d-flex justify-content-between">
-    <div class="card" style="width: 18rem;">
-        <img src="../../assets/arroz.webp" class="card-img-top" alt="...">
+    <div class="card" style="width: 18rem;" *ngFor="let p of produtos">
+        <img src="{{p.img}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Arroz Janonês Momji 1Kg</h5>
-          <p class="card-text">Arroz Japonês Grão Longo Momiji 1kg O Arroz Japonês Momiji é um arroz de grãos longos e arredondados muito utilizado na culinária Oriental.</p>
-          <p class="card-text">R$ 19.89</p>
+          <h5 class="card-title">{{p.nome}}</h5>
+          <p class="card-text">{{p.descricao}}</p>
+          <p class="card-text">{{p.valor | currency: 'BRL'}} </p>
           <a href="#" class="btn btn-primary bg-danger-subtle text-danger" (click)="Comprar()">Comprar</a>
         </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="../../assets/doce.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Moti Doce De Arroz Japonês Sabor Morango Royal Family 235g Kubota</h5>
-          <p class="card-text">DOCE DE FARINHA DE ARROZ COM SABOR DE MORANGO Marca: Kubota Origem: Japão.</p>
-          <p class="card-text">R$ 43.65</p>
-          <a href="#" class="btn btn-primary bg-danger-subtle text-danger" (click)="Comprar()">Comprar</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="../../assets/maionese2.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Maionese Japonesa Kewpie 450g Especial Para Sushi</h5>
-          <p class="card-text">O Japão tem uma maionese única: a Kewpie A embalagem de plástico quadriculada vermelha e branca com seu icônico logotipo de bebê começa a ter destaque no mercado. </p>
-          <p class="card-text">R$ 26.99</p>
-          <a href="#" class="btn btn-primary bg-danger-subtle text-danger" (click)="Comprar()">Comprar</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="../../assets/wasabi.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Wasabi Premium 1kg Taichi</h5>
-          <p class="card-text">Encontre Wasabi em pó Taichi pacote 1,01kg no atacado. Aqui no Mercado do Japonês o frete é grátis e a cotação agilizada. </p>
-          <p class="card-text">R$ 64.29</p>
-          <a href="#" class="btn btn-primary bg-danger-subtle text-danger" (click)="Comprar()">Comprar</a>
-        </div>
-      </div>
+    </div>
 </div>
+
